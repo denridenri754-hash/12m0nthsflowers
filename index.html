@@ -106,7 +106,11 @@
         .form-group label { font-size: 0.85rem; font-weight: 600; }
         .form-group input, .form-group select, .form-group textarea { padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 10px; font-family: inherit; font-size: 0.9rem; outline: none; }
 
-        .submit-btn { background: var(--accent-dark); color: #fff; border: none; padding: 14px; border-radius: 30px; font-weight: 600; font-size: 1rem; cursor: pointer; width: 100%; }
+        .submit-btn { background: var(--accent-dark); color: #fff; border: none; padding: 14px; border-radius: 30px; font-weight: 600; font-size: 1rem; cursor: pointer; width: 100%; transition: var(--transition); }
+        .submit-btn:hover { background: var(--accent-green); }
+
+        .cart-item-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border-color); }
+        .cart-remove-btn { background: none; border: none; color: #e53e3e; cursor: pointer; font-size: 1rem; padding: 4px; }
 
         .admin-product-list { margin-top: 20px; max-height: 200px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 12px; padding: 10px; }
         .admin-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border-color); }
@@ -314,14 +318,49 @@
         </div>
     </div>
 
-    <!-- MODAL CART -->
+    <!-- MODAL CART & CHECKOUT -->
     <div class="modal-overlay" id="cartModal">
-        <div class="modal-card">
+        <div class="modal-card" style="max-width: 500px;">
             <button class="modal-close" onclick="closeModal('cartModal')">&times;</button>
-            <h2>Ваш Кошик</h2>
-            <div id="cartItemsContainer" style="margin: 20px 0;"></div>
-            <div id="cartTotal" style="font-weight: bold; font-size: 1.2rem; text-align: right; margin-bottom: 20px;"></div>
-            <button class="submit-btn" onclick="alert('Для замовлення зателефонуйте або напишіть у месенджер!')">Оформити замовлення</button>
+            <h2 style="margin-bottom: 15px;">Ваш Кошик 🛍️</h2>
+            
+            <div id="cartItemsContainer" style="margin-bottom: 15px; max-height: 200px; overflow-y: auto;"></div>
+            
+            <div id="cartTotal" style="font-weight: bold; font-size: 1.2rem; text-align: right; margin-bottom: 20px; border-top: 1px solid var(--border-color); padding-top: 10px;"></div>
+
+            <form id="checkoutForm" onsubmit="submitOrder(event)">
+                <h3 style="margin-bottom: 12px; font-size: 1.1rem; color: var(--accent-dark);">Деталі замовлення 📋</h3>
+                
+                <div class="form-group">
+                    <label>Ваше ім'я *</label>
+                    <input type="text" id="orderName" required placeholder="Іван">
+                </div>
+
+                <div class="form-group">
+                    <label>Номер телефону *</label>
+                    <input type="tel" id="orderPhone" required placeholder="+380 66 000 0000">
+                </div>
+
+                <div class="form-group">
+                    <label>Доставка або самовивіз *</label>
+                    <select id="orderDelivery" onchange="toggleAddressField(this.value)">
+                        <option value="Доставка кур'єром">Доставка кур'єром по Одесі</option>
+                        <option value="Самовивіз">Самовивіз (вул. Ніжинська, 56)</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="addressGroup">
+                    <label>Адреса доставки *</label>
+                    <input type="text" id="orderAddress" placeholder="Вулиця, будинок, квартира">
+                </div>
+
+                <div class="form-group">
+                    <label>Коментар / побажання</label>
+                    <textarea id="orderComment" rows="2" placeholder="Текст листівки, час доставки тощо"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn"><i class="fa-paper-plane fa-solid"></i> Надіслати замовлення</button>
+            </form>
         </div>
     </div>
 
@@ -628,26 +667,105 @@
             const p = window.products.find(x => x.id === id);
             if (p) {
                 cart.push(p);
-                document.getElementById('cartCount').innerText = cart.length;
+                updateCartBadge();
                 alert(`"${p.title}" додано у кошик!`);
             }
         }
 
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartBadge();
+            renderCartModal();
+        }
+
+        function updateCartBadge() {
+            document.getElementById('cartCount').innerText = cart.length;
+        }
+
         function openCart() {
+            renderCartModal();
+            document.getElementById('cartModal').classList.add('active');
+        }
+
+        function renderCartModal() {
             const container = document.getElementById('cartItemsContainer');
             container.innerHTML = '';
             let total = 0;
 
-            cart.forEach(item => {
+            if (cart.length === 0) {
+                container.innerHTML = '<div style="text-align:center; color: var(--text-muted); padding:20px;">Ваш кошик порожній</div>';
+                document.getElementById('cartTotal').innerText = 'Разом: 0 грн';
+                return;
+            }
+
+            cart.forEach((item, idx) => {
                 total += item.price;
                 const div = document.createElement('div');
-                div.style.cssText = "display:flex; justify-content:space-between; margin-bottom:8px;";
-                div.innerHTML = `<span>${item.title}</span> <strong>${item.price} грн</strong>`;
+                div.className = 'cart-item-row';
+                div.innerHTML = `
+                    <span>${item.title}</span>
+                    <div>
+                        <strong>${item.price} грн</strong>
+                        <button class="cart-remove-btn" onclick="removeFromCart(${idx})" title="Видалити">&times;</button>
+                    </div>
+                `;
                 container.appendChild(div);
             });
 
             document.getElementById('cartTotal').innerText = `Разом: ${total} грн`;
-            document.getElementById('cartModal').classList.add('active');
+        }
+
+        function toggleAddressField(val) {
+            const addrGroup = document.getElementById('addressGroup');
+            const addrInput = document.getElementById('orderAddress');
+            if (val === 'Самовивіз') {
+                addrGroup.style.display = 'none';
+                addrInput.removeAttribute('required');
+            } else {
+                addrGroup.style.display = 'flex';
+                addrInput.setAttribute('required', 'true');
+            }
+        }
+
+        function submitOrder(e) {
+            e.preventDefault();
+
+            if (cart.length === 0) {
+                alert('Ваш кошик порожній!');
+                return;
+            }
+
+            const name = document.getElementById('orderName').value;
+            const phone = document.getElementById('orderPhone').value;
+            const delivery = document.getElementById('orderDelivery').value;
+            const address = document.getElementById('orderAddress').value;
+            const comment = document.getElementById('orderComment').value;
+
+            let total = cart.reduce((sum, item) => sum + item.price, 0);
+            let itemsList = cart.map(item => `• ${item.title} (${item.price} грн)`).join('\n');
+
+            let message = `💐 *НОВЕ ЗАМОВЛЕННЯ 12monthsflowers*\n\n`;
+            message += `*Товари:*\n${itemsList}\n\n`;
+            message += `*Загальна сума:* ${total} грн\n\n`;
+            message += `*Клієнт:* ${name}\n`;
+            message += `*Телефон:* ${phone}\n`;
+            message += `*Спосіб доставки:* ${delivery}\n`;
+            if (delivery !== 'Самовивіз' && address) {
+                message += `*Адреса:* ${address}\n`;
+            }
+            if (comment) {
+                message += `*Коментар:* ${comment}\n`;
+            }
+
+            // Отправка в Telegram
+            const tgUrl = `https://t.me/Prolisok12?text=${encodeURIComponent(message)}`;
+            window.open(tgUrl, '_blank');
+
+            // Очищаем корзину
+            cart = [];
+            updateCartBadge();
+            closeModal('cartModal');
+            alert('Дякуємо за замовлення! Повідомлення сформовано для відправки в Telegram.');
         }
 
         function closeModal(id) {
