@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12monthsflowers — Доставка квітів Одеса | Авторські букети</title>
+    <title>12monthsflowers — Доставка квітів Одеса</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,991 +24,114 @@
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding-bottom: 60px;
-        }
-
-        h1, h2, h3, h4, .brand-font {
-            font-family: 'Cormorant Garamond', serif;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        /* TOP BAR & HEADER */
-        .top-bar {
-            background-color: var(--accent-dark);
-            color: #ffffff;
-            font-size: 0.85rem;
-            padding: 8px 15px;
-            text-align: center;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .top-bar a, .top-bar span {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .top-bar a:hover {
-            color: var(--accent-light);
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-            padding: 15px 20px;
-        }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            text-decoration: none;
-            color: var(--accent-dark);
-        }
-
-        .logo-img {
-            max-height: 55px;
-            max-width: 160px;
-            object-fit: contain;
-        }
-
-        .logo-fallback {
-            width: 50px;
-            height: 50px;
-            background: var(--accent-soft);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--accent-green);
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .logo-text h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            line-height: 1;
-        }
-
-        .logo-text span {
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            color: var(--accent-green);
-            text-transform: uppercase;
-        }
-
-        /* SEARCH & CART */
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .search-box {
-            position: relative;
-        }
-
-        .search-box input {
-            padding: 8px 35px 8px 15px;
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            outline: none;
-            font-size: 0.85rem;
-            width: 180px;
-            transition: var(--transition);
-            background: var(--bg-main);
-        }
-
-        .search-box input:focus {
-            width: 220px;
-            border-color: var(--accent-green);
-            background: #fff;
-        }
-
-        .search-box i {
-            position: absolute;
-            right: 12px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        .cart-btn {
-            background: var(--accent-soft);
-            color: var(--accent-dark);
-            border: none;
-            padding: 10px 18px;
-            border-radius: 25px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-        .cart-btn:hover {
-            background: var(--accent-green);
-            color: #fff;
-        }
-
-        .cart-badge {
-            background: #e53e3e;
-            color: white;
-            font-size: 0.75rem;
-            padding: 2px 7px;
-            border-radius: 10px;
-        }
-
-        /* HERO BANNER */
-        .hero {
-            background: linear-gradient(rgba(27, 67, 50, 0.4), rgba(27, 67, 50, 0.6)), url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=1600') center/cover;
-            color: #fff;
-            text-align: center;
-            padding: 80px 20px;
-            margin-bottom: 40px;
-        }
-
-        .hero h2 {
-            font-size: 3.2rem;
-            margin-bottom: 15px;
-            font-weight: 500;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 25px;
-            font-weight: 300;
-        }
-
-        .hero-tags {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .hero-tag {
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(5px);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            border: 1px solid rgba(255,255,255,0.3);
-        }
-
-        /* CATEGORIES FILTER */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .categories-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--accent-dark);
-            margin-bottom: 20px;
-        }
-
-        .categories-nav {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 40px;
-        }
-
-        .cat-btn {
-            background: #fff;
-            border: 1px solid var(--border-color);
-            padding: 10px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--text-main);
-            transition: var(--transition);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .cat-btn:hover, .cat-btn.active {
-            background: var(--accent-dark);
-            color: #fff;
-            border-color: var(--accent-dark);
-            box-shadow: 0 4px 12px rgba(27, 67, 50, 0.2);
-        }
-
-        /* PRODUCTS GRID */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .product-card {
-            background: var(--bg-card);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(27, 67, 50, 0.12);
-        }
-
-        /* BADGES (NEW, TOP, SALE) */
-        .product-badges {
-            position: absolute;
-            top: 12px;
-            left: 12px;
-            z-index: 10;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .badge {
-            padding: 4px 10px;
-            border-radius: 12px;
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-        }
-
-        .badge-new { background: #3182ce; color: #fff; }
-        .badge-top { background: #d69e2e; color: #fff; }
-        .badge-sale { background: #e53e3e; color: #fff; }
-
-        /* SLIDER FOR MULTIPLE IMAGES */
-        .product-gallery {
-            position: relative;
-            width: 100%;
-            height: 320px;
-            background: #f0f0f0;
-            overflow: hidden;
-        }
-
-        .gallery-slides {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            transition: transform 0.4s ease-in-out;
-        }
-
-        .gallery-slide {
-            min-width: 100%;
-            height: 100%;
-        }
-
-        .gallery-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .gallery-dots {
-            position: absolute;
-            bottom: 12px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 6px;
-            z-index: 5;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.6);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .dot.active {
-            background: #fff;
-            width: 20px;
-            border-radius: 10px;
-        }
-
-        .gallery-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255,255,255,0.8);
-            border: none;
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 5;
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .product-card:hover .gallery-arrow {
-            opacity: 1;
-        }
-
-        .gallery-arrow.prev { left: 10px; }
-        .gallery-arrow.next { right: 10px; }
-
-        .product-info {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .product-category {
-            font-size: 0.75rem;
-            color: var(--accent-green);
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .product-title {
-            font-size: 1.4rem;
-            color: var(--accent-dark);
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .product-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-top: auto;
-            padding-top: 15px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .price-box {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .old-price {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-decoration: line-through;
-        }
-
-        .product-price {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--accent-dark);
-        }
-
-        .product-price.sale {
-            color: #e53e3e;
-        }
-
-        .add-to-cart-btn {
-            background: var(--accent-soft);
-            color: var(--accent-dark);
-            border: none;
-            padding: 8px 16px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: var(--transition);
-        }
-
-        .add-to-cart-btn:hover {
-            background: var(--accent-dark);
-            color: #fff;
-        }
-
-        /* LOCATION SECTION ("ДЕ МИ ЗНАХОДИМОСЬ") */
-        .location-section {
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 40px;
-            box-shadow: var(--shadow);
-            margin: 60px 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .location-info h2 {
-            font-size: 2.3rem;
-            color: var(--accent-dark);
-            margin-bottom: 15px;
-        }
-
-        .location-list {
-            list-style: none;
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .location-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 0.95rem;
-        }
-
-        .location-item i {
-            color: var(--accent-green);
-            font-size: 1.2rem;
-            margin-top: 3px;
-        }
-
-        .location-map {
-            width: 100%;
-            height: 280px;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-        }
-
-        .location-map iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* CONTACTS & MESSENGERS */
-        .contacts-section {
-            background: var(--accent-soft);
-            border-radius: 24px;
-            padding: 40px;
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .contacts-section h2 {
-            font-size: 2.2rem;
-            color: var(--accent-dark);
-            margin-bottom: 10px;
-        }
-
-        .messengers-list {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-
-        .msg-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 24px;
-            border-radius: 30px;
-            text-decoration: none;
-            color: #fff;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: var(--transition);
-        }
-
-        .msg-link:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Montserrat', sans-serif; background-color: var(--bg-main); color: var(--text-main); line-height: 1.6; padding-bottom: 60px; }
+        h1, h2, h3, h4, .brand-font { font-family: 'Cormorant Garamond', serif; }
+        a { color: inherit; text-decoration: none; }
+
+        .top-bar { background-color: var(--accent-dark); color: #ffffff; font-size: 0.85rem; padding: 8px 15px; text-align: center; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .top-bar a:hover { color: var(--accent-light); }
+
+        header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 15px rgba(0,0,0,0.05); padding: 15px 20px; }
+        .header-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+        .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; color: var(--accent-dark); }
+        .logo-img { max-height: 55px; max-width: 160px; object-fit: contain; }
+        .logo-fallback { width: 50px; height: 50px; background: var(--accent-soft); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: var(--accent-green); }
+        .logo-text h1 { font-size: 1.8rem; font-weight: 700; letter-spacing: 1px; line-height: 1; }
+        .logo-text span { font-size: 0.75rem; letter-spacing: 2px; color: var(--accent-green); text-transform: uppercase; }
+
+        .header-actions { display: flex; align-items: center; gap: 15px; }
+        .search-box { position: relative; }
+        .search-box input { padding: 8px 35px 8px 15px; border: 1px solid var(--border-color); border-radius: 20px; outline: none; font-size: 0.85rem; width: 180px; transition: var(--transition); background: var(--bg-main); }
+        .search-box input:focus { width: 220px; border-color: var(--accent-green); background: #fff; }
+        .search-box i { position: absolute; right: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.85rem; }
+
+        .cart-btn { background: var(--accent-soft); color: var(--accent-dark); border: none; padding: 10px 18px; border-radius: 25px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 0.9rem; transition: var(--transition); }
+        .cart-btn:hover { background: var(--accent-green); color: #fff; }
+        .cart-badge { background: #e53e3e; color: white; font-size: 0.75rem; padding: 2px 7px; border-radius: 10px; }
+
+        .hero { background: linear-gradient(rgba(27, 67, 50, 0.4), rgba(27, 67, 50, 0.6)), url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=1600') center/cover; color: #fff; text-align: center; padding: 80px 20px; margin-bottom: 40px; }
+        .hero h2 { font-size: 3.2rem; margin-bottom: 15px; font-weight: 500; }
+        .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 25px; font-weight: 300; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .categories-title { text-align: center; font-size: 2.2rem; color: var(--accent-dark); margin-bottom: 20px; }
+        .categories-nav { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+        .cat-btn { background: #fff; border: 1px solid var(--border-color); padding: 10px 20px; border-radius: 25px; cursor: pointer; font-family: inherit; font-size: 0.85rem; font-weight: 500; color: var(--text-main); transition: var(--transition); text-transform: uppercase; }
+        .cat-btn:hover, .cat-btn.active { background: var(--accent-dark); color: #fff; border-color: var(--accent-dark); }
+
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        .product-card { background: var(--bg-card); border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); display: flex; flex-direction: column; position: relative; }
+        .product-card:hover { transform: translateY(-8px); }
+
+        .product-badges { position: absolute; top: 12px; left: 12px; z-index: 10; display: flex; flex-direction: column; gap: 6px; }
+        .badge { padding: 4px 10px; border-radius: 12px; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: #fff; }
+        .badge-new { background: #3182ce; }
+        .badge-top { background: #d69e2e; }
+        .badge-sale { background: #e53e3e; }
+
+        .product-gallery { position: relative; width: 100%; height: 320px; background: #f0f0f0; overflow: hidden; }
+        .gallery-slide { width: 100%; height: 100%; }
+        .gallery-slide img { width: 100%; height: 100%; object-fit: cover; }
+
+        .product-info { padding: 20px; display: flex; flex-direction: column; flex-grow: 1; }
+        .product-category { font-size: 0.75rem; color: var(--accent-green); text-transform: uppercase; font-weight: 600; margin-bottom: 5px; }
+        .product-title { font-size: 1.4rem; color: var(--accent-dark); margin-bottom: 10px; font-weight: 600; }
+        .product-footer { display: flex; justify-content: space-between; align-items: flex-end; margin-top: auto; padding-top: 15px; border-top: 1px solid var(--border-color); }
+        .product-price { font-size: 1.25rem; font-weight: 700; color: var(--accent-dark); }
+        .old-price { font-size: 0.85rem; color: var(--text-muted); text-decoration: line-through; display: block; }
+        .add-to-cart-btn { background: var(--accent-soft); color: var(--accent-dark); border: none; padding: 8px 16px; border-radius: 20px; cursor: pointer; font-weight: 600; }
+        .add-to-cart-btn:hover { background: var(--accent-dark); color: #fff; }
+
+        .location-section { background: #ffffff; border-radius: 24px; padding: 40px; box-shadow: var(--shadow); margin: 60px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+        .location-info h2 { font-size: 2.3rem; color: var(--accent-dark); margin-bottom: 15px; }
+        .location-list { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 15px; }
+        .location-item { display: flex; align-items: flex-start; gap: 12px; }
+        .location-item i { color: var(--accent-green); font-size: 1.2rem; margin-top: 3px; }
+        .location-map { width: 100%; height: 280px; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-color); }
+
+        .contacts-section { background: var(--accent-soft); border-radius: 24px; padding: 40px; text-align: center; margin-bottom: 60px; }
+        .messengers-list { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 25px; }
+        .msg-link { display: flex; align-items: center; gap: 10px; padding: 12px 24px; border-radius: 30px; color: #fff; font-weight: 600; }
         .msg-tg { background: #0088cc; }
         .msg-wa { background: #25D366; }
         .msg-viber { background: #7360f2; }
 
-        .tel-link {
-            color: var(--accent-dark);
-            font-weight: 700;
-            text-decoration: underline;
-        }
+        .modal-overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; z-index: 1000; opacity: 0; pointer-events: none; transition: var(--transition); }
+        .modal-overlay.active { opacity: 1; pointer-events: all; }
+        .modal-card { background: #fff; width: 90%; max-width: 550px; max-height: 90vh; overflow-y: auto; border-radius: 20px; padding: 30px; position: relative; }
+        .modal-close { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-muted); }
 
-        /* MODALS COMMON */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.6);
-            backdrop-filter: blur(4px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            opacity: 0;
-            pointer-events: none;
-            transition: var(--transition);
-        }
+        .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 15px; }
+        .form-group label { font-size: 0.85rem; font-weight: 600; }
+        .form-group input, .form-group select, .form-group textarea { padding: 10px 14px; border: 1px solid var(--border-color); border-radius: 10px; font-family: inherit; font-size: 0.9rem; outline: none; }
 
-        .modal-overlay.active {
-            opacity: 1;
-            pointer-events: all;
-        }
+        .submit-btn { background: var(--accent-dark); color: #fff; border: none; padding: 14px; border-radius: 30px; font-weight: 600; font-size: 1rem; cursor: pointer; width: 100%; }
 
-        .modal-card {
-            background: #fff;
-            width: 90%;
-            max-width: 550px;
-            max-height: 90vh;
-            overflow-y: auto;
-            border-radius: 20px;
-            padding: 30px;
-            position: relative;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-        }
+        .admin-product-list { margin-top: 20px; max-height: 200px; overflow-y: auto; border: 1px solid var(--border-color); border-radius: 12px; padding: 10px; }
+        .admin-item { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border-color); }
+        .admin-item-actions { display: flex; gap: 6px; }
 
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-muted);
-        }
+        footer { background: var(--accent-dark); color: #fff; padding: 40px 20px 20px; margin-top: 80px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px; }
+        .copyright { text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; color: #a0aec0; }
+        .secret-trigger { color: rgba(255,255,255,0.2); cursor: pointer; }
 
-        .modal-title {
-            font-size: 2rem;
-            color: var(--accent-dark);
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--accent-soft);
-            padding-bottom: 10px;
-        }
-
-        /* CUSTOM AUTH MODAL */
-        .auth-modal-card {
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 35px 30px;
-            max-width: 420px;
-            width: 90%;
-            text-align: center;
-            box-shadow: 0 20px 40px rgba(27, 67, 50, 0.15);
-            border: 1px solid rgba(74, 124, 89, 0.15);
-            position: relative;
-        }
-
-        .auth-icon-wrapper {
-            width: 65px;
-            height: 65px;
-            background: var(--accent-soft);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 16px;
-            color: var(--accent-dark);
-            font-size: 1.6rem;
-        }
-
-        .auth-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent-dark);
-            margin-bottom: 6px;
-        }
-
-        .auth-subtitle {
-            font-size: 0.88rem;
-            color: var(--text-muted);
-            margin-bottom: 24px;
-        }
-
-        .auth-input-wrapper input {
-            width: 100%;
-            padding: 14px 16px;
-            border: 1.5px solid var(--border-color);
-            border-radius: 14px;
-            font-size: 1rem;
-            outline: none;
-            transition: var(--transition);
-            background: var(--bg-main);
-            text-align: center;
-            letter-spacing: 2px;
-            margin-bottom: 20px;
-        }
-
-        .auth-input-wrapper input:focus {
-            border-color: var(--accent-green);
-            background: #ffffff;
-            box-shadow: 0 0 0 4px rgba(74, 124, 89, 0.1);
-        }
-
-        .auth-actions {
-            display: flex;
-            gap: 12px;
-        }
-
-        .auth-btn-cancel {
-            flex: 1;
-            padding: 12px;
-            border-radius: 14px;
-            border: 1px solid var(--border-color);
-            background: transparent;
-            color: var(--text-muted);
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .auth-btn-submit {
-            flex: 1;
-            padding: 12px;
-            border-radius: 14px;
-            border: none;
-            background: var(--accent-dark);
-            color: #ffffff;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        /* CART LIST */
-        .cart-items {
-            margin-bottom: 20px;
-        }
-
-        .cart-item {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .cart-item-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        .cart-item-details {
-            flex-grow: 1;
-        }
-
-        .cart-item-title {
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .cart-item-price {
-            color: var(--accent-green);
-            font-size: 0.85rem;
-        }
-
-        .cart-item-remove {
-            background: none;
-            border: none;
-            color: #e53e3e;
-            cursor: pointer;
-            font-size: 1.1rem;
-        }
-
-        .cart-total {
-            font-size: 1.3rem;
-            font-weight: 700;
-            text-align: right;
-            margin-top: 15px;
-            color: var(--accent-dark);
-        }
-
-        /* FORM STYLES */
-        .order-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-
-        .form-group label {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        .form-group input, .form-group select, .form-group textarea {
-            padding: 10px 14px;
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            font-family: inherit;
-            font-size: 0.9rem;
-            outline: none;
-        }
-
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-            border-color: var(--accent-green);
-        }
-
-        .messenger-choice {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .messenger-radio {
-            display: none;
-        }
-
-        .messenger-label {
-            border: 1px solid var(--border-color);
-            padding: 10px;
-            border-radius: 10px;
-            text-align: center;
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 5px;
-            transition: var(--transition);
-        }
-
-        .messenger-radio:checked + .messenger-label {
-            border-color: var(--accent-green);
-            background: var(--accent-soft);
-            color: var(--accent-dark);
-        }
-
-        .submit-btn {
-            background: var(--accent-dark);
-            color: #fff;
-            border: none;
-            padding: 14px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: var(--transition);
-        }
-
-        .submit-btn:hover {
-            background: var(--accent-green);
-        }
-
-        /* ADMIN PANEL MODAL */
-        .admin-modal {
-            max-width: 650px;
-        }
-
-        .admin-file-upload {
-            border: 2px dashed var(--accent-green);
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            background: var(--accent-soft);
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-
-        .admin-preview-grid {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-top: 10px;
-        }
-
-        .admin-preview-img {
-            width: 70px;
-            height: 70px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-
-        .admin-product-list {
-            margin-top: 20px;
-            max-height: 250px;
-            overflow-y: auto;
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 10px;
-        }
-
-        .admin-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            border-bottom: 1px solid var(--border-color);
-            gap: 10px;
-        }
-
-        .admin-item:last-child {
-            border-bottom: none;
-        }
-
-        .admin-item-actions {
-            display: flex;
-            gap: 6px;
-        }
-
-        .btn-edit {
-            background: #3182ce;
-            color: #fff;
-            border: none;
-            padding: 5px 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
-
-        .btn-delete {
-            background: #e53e3e;
-            color: #fff;
-            border: none;
-            padding: 5px 12px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--accent-dark);
-            color: #fff;
-            padding: 40px 20px 20px;
-            margin-top: 80px;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-
-        .footer-col h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: var(--accent-light);
-        }
-
-        .footer-col p {
-            font-size: 0.9rem;
-            color: #cbd5e0;
-            margin-bottom: 8px;
-        }
-
-        .secret-trigger {
-            color: rgba(255,255,255,0.2);
-            cursor: pointer;
-            user-select: none;
-            display: inline-block;
-        }
-
-        .secret-trigger:hover {
-            color: var(--accent-light);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.8rem;
-            color: #a0aec0;
-        }
-
-        /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .hero h2 { font-size: 2.2rem; }
-            .header-container { flex-direction: column; align-items: stretch; }
-            .header-actions { justify-content: space-between; width: 100%; }
-            .search-box input { width: 140px; }
-            .search-box input:focus { width: 160px; }
-            .contacts-section { padding: 25px 15px; }
-            .messenger-choice { grid-template-columns: 1fr; }
-            .location-section { grid-template-columns: 1fr; padding: 25px 15px; }
+            .header-container { flex-direction: column; }
+            .location-section { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- TOP BAR -->
     <div class="top-bar">
         <span><i class="fa-solid fa-location-dot"></i> Ніжинська 56, Одеса</span>
         <span><i class="fa-solid fa-clock"></i> 11:00 - 20:00</span>
         <a href="tel:+380663037806"><i class="fa-solid fa-phone"></i> +380 66 303 7806</a>
     </div>
 
-    <!-- HEADER -->
     <header>
         <div class="header-container">
             <a href="#" class="logo-container">
@@ -1035,23 +158,14 @@
         </div>
     </header>
 
-    <!-- HERO BANNER -->
     <section class="hero">
         <h2 class="brand-font">Авторські Букети в Центрі Міста</h2>
         <p>Створюємо квітковий настрій та затишок для найважливіших моментів життя</p>
-        <div class="hero-tags">
-            <span class="hero-tag">🌸 Весільні букети</span>
-            <span class="hero-tag">🏡 Декор для дому</span>
-            <span class="hero-tag">🎁 Можна забрати сьогодні</span>
-        </div>
     </section>
 
-    <!-- MAIN CONTENT -->
     <div class="container">
-
-        <!-- CATEGORIES FILTER -->
         <h2 class="categories-title">Каталог Букетів</h2>
-        <div class="categories-nav" id="categoriesNav">
+        <div class="categories-nav">
             <button class="cat-btn active" onclick="filterCategory('ALL')">Всі</button>
             <button class="cat-btn" onclick="filterCategory('ВЕСІЛЬНІ')">ВЕСІЛЬНІ</button>
             <button class="cat-btn" onclick="filterCategory('ІНТЕР\'ЄРНІ')">ІНТЕР'ЄРНІ</button>
@@ -1061,201 +175,106 @@
             <button class="cat-btn" onclick="filterCategory('ВІД 4500 ГРН')">ВІД 4500 ГРН</button>
         </div>
 
-        <!-- PRODUCTS GRID -->
         <div class="products-grid" id="productsGrid">
-            <!-- Dynamically Rendered -->
+            <div style="grid-column: 1/-1; text-align:center; padding: 40px; color: var(--text-muted);">
+                Завантаження каталогу... 🌸
+            </div>
         </div>
 
-        <!-- LOCATION SECTION ("ДЕ МИ ЗНАХОДИМОСЬ") -->
         <section class="location-section">
             <div class="location-info">
                 <h2 class="brand-font">Де ми знаходимось 📍</h2>
-                <p>Завітайте до нашої затишної квіткової майстерні в самому серці Одеси! Ви можете обрати букет наживо або забрати вже готове замовлення.</p>
+                <p>Завітайте до нашої квіткової майстерні в Одесі або замовте доставку!</p>
                 <ul class="location-list">
                     <li class="location-item">
                         <i class="fa-solid fa-location-dot"></i>
-                        <div><strong>Адреса:</strong> вул. Ніжинська, 56, Одеса, Україна</div>
+                        <div><strong>Адреса:</strong> вул. Ніжинська, 56, Одеса</div>
                     </li>
                     <li class="location-item">
                         <i class="fa-solid fa-clock"></i>
-                        <div><strong>Графік роботи:</strong> Щодня з 11:00 до 20:00</div>
+                        <div><strong>Графік:</strong> Щодня з 11:00 до 20:00</div>
                     </li>
                     <li class="location-item">
                         <i class="fa-solid fa-phone"></i>
-                        <div><strong>Телефон:</strong> <a href="tel:+380663037806" class="tel-link">+380 66 303 7806</a></div>
+                        <div><strong>Телефон:</strong> <a href="tel:+380663037806" style="text-decoration:underline;">+380 66 303 7806</a></div>
                     </li>
                 </ul>
             </div>
             <div class="location-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.0123012938!2d30.7289000!3d46.4820000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c631980838971f%3A0x6b80170889098!2z0LLRg9C7LiDQndGW0LbQuNC90YHRjNC60LAsIDU2LCDQntC00LXRgdCwLCDQntC00LXRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgNjUwMDA!5e0!3m2!1suk!2sua!4v1680000000000!5m2!1suk!2sua" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2747.0123012938!2d30.7289000!3d46.4820000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c631980838971f%3A0x6b80170889098!2z0LLRg9C7LiDQndGW0LbQuNC90YHRjNC60LAsIDU2LCDQntC00LXRgdCw!5e0!3m2!1suk!2sua!4v1680000000000!5m2!1suk!2sua" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
 
-        <!-- CONTACTS & MESSENGERS -->
         <div class="contacts-section">
             <h2>Зв'яжіться з нами</h2>
-            <p>Бажаєте індивідуальний букет або маєте запитання? Зателефонуйте <a href="tel:+380663037806" class="tel-link">+380 66 303 7806</a> або напишіть нам у месенджер!</p>
+            <p>Зателефонуйте <a href="tel:+380663037806"><strong>+380 66 303 7806</strong></a> або напишіть у зручний месенджер:</p>
             <div class="messengers-list">
-                <a href="https://t.me/Prolisok12" target="_blank" class="msg-link msg-tg">
-                    <i class="fa-brands fa-telegram"></i> Telegram
-                </a>
-                <a href="https://wa.me/380663037806" target="_blank" class="msg-link msg-wa">
-                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="https://r.mssg.me/m/63ff69ff0dfc940011df431e" target="_blank" class="msg-link msg-viber">
-                    <i class="fa-brands fa-viber"></i> Viber
-                </a>
+                <a href="https://t.me/Prolisok12" target="_blank" class="msg-link msg-tg"><i class="fa-brands fa-telegram"></i> Telegram</a>
+                <a href="https://wa.me/380663037806" target="_blank" class="msg-link msg-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://r.mssg.me/m/63ff69ff0dfc940011df431e" target="_blank" class="msg-link msg-viber"><i class="fa-brands fa-viber"></i> Viber</a>
             </div>
         </div>
-
     </div>
 
-    <!-- FOOTER -->
     <footer>
         <div class="footer-container">
-            <div class="footer-col">
-                <h3 class="brand-font">12monthsflowers</h3>
-                <p>Квіткове оформлення подій, декор для дому та подарунки в самому серці Одеси.</p>
-                <p><strong>Адреса:</strong> Ніжинська 56, Одеса</p>
+            <div>
+                <h3>12monthsflowers</h3>
+                <p>Ніжинська 56, Одеса</p>
             </div>
-            <div class="footer-col">
-                <h3>Графік Роботи</h3>
-                <p>Щодня: 11:00 - 20:00</p>
-                <p>Прийом замовлень онлайн: 24/7</p>
+            <div>
+                <h3>Графік</h3>
+                <p>Щодня 11:00 - 20:00</p>
             </div>
-            <div class="footer-col">
+            <div>
                 <h3>Контакти</h3>
-                <p>Тел: <a href="tel:+380663037806" style="color:var(--accent-light);">+380 66 303 7806</a></p>
-                <p>Email: info@12monthsflowers.ua</p>
+                <p><a href="tel:+380663037806" style="color:#81c784;">+380 66 303 7806</a></p>
             </div>
         </div>
         <div class="copyright">
-            &copy; 2026 12monthsflowers. Всі права захищені. 
-            <span class="secret-trigger" onclick="promptAdminLogin()" title="Вхід в адмін-панель">🔒</span>
+            &copy; 2026 12monthsflowers. <span class="secret-trigger" onclick="promptAdminLogin()">🔒</span>
         </div>
     </footer>
 
-    <!-- STYLED AUTH MODAL -->
+    <!-- MODAL AUTH -->
     <div class="modal-overlay" id="authModal">
-        <div class="auth-modal-card">
+        <div class="modal-card" style="text-align: center; max-width: 400px;">
             <button class="modal-close" onclick="closeModal('authModal')">&times;</button>
-            <div class="auth-icon-wrapper">
-                <i class="fa-solid fa-lock"></i>
-            </div>
-            <h3 class="auth-title">Підтвердіть дію</h3>
-            <p class="auth-subtitle">Введіть секретний пароль для доступу до адмін-панелі:</p>
-            
-            <form onsubmit="handleAdminAuth(event)">
-                <div class="auth-input-wrapper">
-                    <input type="password" id="authPasswordInput" placeholder="••••••••" required autocomplete="off">
-                </div>
-                <div class="auth-actions">
-                    <button type="button" class="auth-btn-cancel" onclick="closeModal('authModal')">Скасувати</button>
-                    <button type="submit" class="auth-btn-submit">Увійти</button>
-                </div>
-            </form>
+            <h3 style="margin-bottom: 15px;">Вхід в Адмін-панель</h3>
+            <input type="password" id="authPasswordInput" placeholder="Пароль" style="width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; text-align: center; margin-bottom: 15px;">
+            <button class="submit-btn" onclick="checkAuth()">Увійти</button>
         </div>
     </div>
 
-    <!-- CART MODAL -->
-    <div class="modal-overlay" id="cartModal">
-        <div class="modal-card">
-            <button class="modal-close" onclick="closeModal('cartModal')">&times;</button>
-            <h2 class="modal-title">Ваш Кошик</h2>
-            <div id="cartItemsContainer" class="cart-items"></div>
-            <div class="cart-total" id="cartTotal">Разом: 0 грн</div>
-            
-            <form class="order-form" id="orderForm" onsubmit="submitOrder(event)">
-                <h3 style="margin-top: 15px; font-size: 1.2rem; color: var(--accent-dark);">Оформлення замовлення</h3>
-                
-                <div class="form-group">
-                    <label>Ваше Ім'я *</label>
-                    <input type="text" id="orderName" required placeholder="Олена">
-                </div>
-
-                <div class="form-group">
-                    <label>Номер телефону *</label>
-                    <input type="tel" id="orderPhone" required placeholder="+380 99 123 4567">
-                </div>
-
-                <div class="form-group">
-                    <label>Спосіб отримання *</label>
-                    <select id="orderDelivery" onchange="toggleAddressInput()">
-                        <option value="Доставка по Одесі">Доставка по Одесі</option>
-                        <option value="Самовивіз (Ніжинська 56)">Самовивіз (Ніжинська 56, Одеса)</option>
-                    </select>
-                </div>
-
-                <div class="form-group" id="addressGroup">
-                    <label>Адреса доставки *</label>
-                    <input type="text" id="orderAddress" placeholder="Вулиця, будинок, квартира">
-                </div>
-
-                <div class="form-group">
-                    <label>Дата та час доставки / самовивозу</label>
-                    <input type="text" id="orderTime" placeholder="Наприклад: Сьогодні о 16:00">
-                </div>
-
-                <div class="form-group">
-                    <label>Текст для записки / Коментар</label>
-                    <textarea id="orderComment" rows="2" placeholder="Текст вітання або побажання до букета..."></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label>Оберіть месенджер для підтвердження замовлення:</label>
-                    <div class="messenger-choice">
-                        <input type="radio" name="msgType" value="tg" id="msg_tg" class="messenger-radio" checked>
-                        <label for="msg_tg" class="messenger-label">
-                            <i class="fa-brands fa-telegram" style="color:#0088cc;"></i> Telegram
-                        </label>
-
-                        <input type="radio" name="msgType" value="wa" id="msg_wa" class="messenger-radio">
-                        <label for="msg_wa" class="messenger-label">
-                            <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i> WhatsApp
-                        </label>
-
-                        <input type="radio" name="msgType" value="viber" id="msg_viber" class="messenger-radio">
-                        <label for="msg_viber" class="messenger-label">
-                            <i class="fa-brands fa-viber" style="color:#7360f2;"></i> Viber
-                        </label>
-                    </div>
-                </div>
-
-                <button type="submit" class="submit-btn">Оформити замовлення</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- ADMIN MODAL -->
+    <!-- MODAL ADMIN -->
     <div class="modal-overlay" id="adminModal">
-        <div class="modal-card admin-modal">
+        <div class="modal-card" style="max-width: 600px;">
             <button class="modal-close" onclick="closeModal('adminModal')">&times;</button>
-            <h2 class="modal-title" id="adminFormTitle">Адмін-панель 🔐</h2>
-            
-            <form onsubmit="saveProduct(event)">
+            <h2 id="adminTitleHeader" style="margin-bottom: 20px;">Адмін-панель 🔐</h2>
+
+            <form id="adminForm" onsubmit="saveProduct(event)">
                 <input type="hidden" id="adminEditId" value="">
 
                 <div class="form-group">
-                    <label>Назва букета/товару *</label>
-                    <input type="text" id="adminTitle" required placeholder="Ніжність весни">
+                    <label>Назва товару *</label>
+                    <input type="text" id="adminTitle" required placeholder="Наприклад: Букет з троянд">
                 </div>
 
-                <div style="display: flex; gap: 15px;">
-                    <div class="form-group" style="flex: 1;">
-                        <label>Акційна/Поточна ціна (грн) *</label>
-                        <input type="number" id="adminPrice" required placeholder="2800">
+                <div style="display: flex; gap: 10px;">
+                    <div class="form-group" style="flex:1;">
+                        <label>Ціна (грн) *</label>
+                        <input type="number" id="adminPrice" required placeholder="1800">
                     </div>
-
-                    <div class="form-group" style="flex: 1;">
-                        <label>Стара ціна (для Акції %)</label>
-                        <input type="number" id="adminOldPrice" placeholder="3500">
+                    <div class="form-group" style="flex:1;">
+                        <label>Стара ціна (необов'язково)</label>
+                        <input type="number" id="adminOldPrice" placeholder="2200">
                     </div>
                 </div>
 
-                <div style="display: flex; gap: 15px;">
-                    <div class="form-group" style="flex: 1;">
+                <div style="display: flex; gap: 10px;">
+                    <div class="form-group" style="flex:1;">
                         <label>Категорія *</label>
-                        <select id="adminCategory" required>
+                        <select id="adminCategory">
                             <option value="ВЕСІЛЬНІ">ВЕСІЛЬНІ</option>
                             <option value="ІНТЕР'ЄРНІ">ІНТЕР'ЄРНІ</option>
                             <option value="ROSES">ROSES</option>
@@ -1264,169 +283,115 @@
                             <option value="ВІД 4500 ГРН">ВІД 4500 ГРН</option>
                         </select>
                     </div>
-
-                    <div class="form-group" style="flex: 1;">
-                        <label>Мітка / Бейдж</label>
+                    <div class="form-group" style="flex:1;">
+                        <label>Мітка (Бейдж)</label>
                         <select id="adminBadge">
-                            <option value="">Немає</option>
-                            <option value="NEW">NEW (Новинка)</option>
-                            <option value="TOP">TOP (Хіт продажів 🔥)</option>
-                            <option value="SALE">SALE (Акція)</option>
+                            <option value="">Без мітки</option>
+                            <option value="NEW">NEW</option>
+                            <option value="TOP">TOP 🔥</option>
+                            <option value="SALE">SALE %</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="form-group" style="margin-top: 10px;">
-                    <label>Фотографії (залиште порожнім, якщо редагуєте і фото ті самі)</label>
-                    <div class="admin-file-upload" onclick="document.getElementById('adminFileInput').click()">
-                        <i class="fa-solid fa-cloud-arrow-up" style="font-size: 2rem; color: var(--accent-green);"></i>
-                        <p>Натисніть для вибору від 1 до 5 фото</p>
-                        <input type="file" id="adminFileInput" accept="image/*" multiple style="display:none;" onchange="handleFileSelect(event)">
-                    </div>
-                    <div class="admin-preview-grid" id="adminPreviewGrid"></div>
+                <div class="form-group">
+                    <label>Фотографії товару</label>
+                    <input type="file" id="adminFileInput" accept="image/*" multiple onchange="handleFileSelect(event)">
+                    <div id="adminPreviewGrid" style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;"></div>
                 </div>
 
-                <div style="display: flex; gap: 10px;">
-                    <button type="submit" id="adminSaveBtn" class="submit-btn" style="background: var(--accent-green); flex: 1;">Додати новий товар</button>
-                    <button type="button" id="adminCancelEditBtn" onclick="resetAdminForm()" class="submit-btn" style="background: var(--text-muted); flex: 0.5; display: none;">Скасувати</button>
-                </div>
+                <button type="submit" id="adminSubmitBtn" class="submit-btn" style="background: var(--accent-green);">Зберегти товар у хмару</button>
             </form>
 
-            <h3 style="margin-top: 30px; font-size: 1.2rem; color: var(--accent-dark);">Список усіх товарів (для редагування)</h3>
+            <hr style="margin: 25px 0;">
+
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h3>Список товарів у хмарі</h3>
+                <button onclick="restoreDefaults()" style="background:none; border:none; color: var(--accent-green); cursor:pointer; text-decoration:underline; font-size:0.85rem;">Завантажити базові товари</button>
+            </div>
+            
             <div class="admin-product-list" id="adminProductList"></div>
         </div>
     </div>
 
-    <!-- JAVASCRIPT -->
+    <!-- MODAL CART -->
+    <div class="modal-overlay" id="cartModal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal('cartModal')">&times;</button>
+            <h2>Ваш Кошик</h2>
+            <div id="cartItemsContainer" style="margin: 20px 0;"></div>
+            <div id="cartTotal" style="font-weight: bold; font-size: 1.2rem; text-align: right; margin-bottom: 20px;"></div>
+            <button class="submit-btn" onclick="alert('Для замовлення зателефонуйте або напишіть у месенджер!')">Оформити замовлення</button>
+        </div>
+    </div>
+
+    <!-- FIREBASE SDKs -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getDatabase, ref, set, onValue, remove } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCBvF90yMNdJBiXP_cvrwaLwuS1NfNALo4",
+            authDomain: "months-3df27.firebaseapp.com",
+            databaseURL: "https://months-3df27-default-rtdb.firebaseio.com",
+            projectId: "months-3df27",
+            storageBucket: "months-3df27.firebasestorage.app",
+            messagingSenderId: "588001916804",
+            appId: "1:588001916804:web:70e2e4dc5b5fe0b2374fd1",
+            measurementId: "G-85QVGQQ3H7"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        window.db = db;
+        window.dbRef = ref;
+        window.dbSet = set;
+        window.dbRemove = remove;
+
+        const productsRef = ref(db, 'products');
+        onValue(productsRef, (snapshot) => {
+            const data = snapshot.val();
+            if (data) {
+                if (Array.isArray(data)) {
+                    window.products = data.filter(Boolean);
+                } else {
+                    window.products = Object.values(data);
+                }
+            } else {
+                window.products = [];
+            }
+            renderProducts();
+            renderAdminList();
+        });
+    </script>
+
     <script>
         const initialProducts = [
-            {
-                id: 1,
-                title: 'Ніжний Весільний Блик',
-                price: 4800,
-                oldPrice: 5500,
-                badge: 'SALE',
-                category: 'ВЕСІЛЬНІ',
-                images: [
-                    'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&q=80&w=800',
-                    'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&q=80&w=800'
-                ]
-            },
-            {
-                id: 2,
-                title: 'Букет Преміум Roses',
-                price: 4600,
-                oldPrice: null,
-                badge: 'TOP',
-                category: 'ROSES',
-                images: [
-                    'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800'
-                ]
-            },
-            {
-                id: 3,
-                title: 'Інтер\'єрна Ваза з Сухоцвітами',
-                price: 2600,
-                oldPrice: null,
-                badge: 'NEW',
-                category: 'ІНТЕР\'ЄРНІ',
-                images: [
-                    'https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&q=80&w=800'
-                ]
-            },
-            {
-                id: 4,
-                title: 'Ніжно-рожеві Троянди',
-                price: 1950,
-                oldPrice: 2300,
-                badge: 'SALE',
-                category: 'ВІД 1800 ГРН',
-                images: [
-                    'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&q=80&w=800'
-                ]
-            }
+            { id: 1, title: 'Ніжний Весільний Букет', price: 4800, oldPrice: 5500, badge: 'SALE', category: 'ВЕСІЛЬНІ', images: ['https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=600'] },
+            { id: 2, title: 'Букет Преміум Roses', price: 4600, oldPrice: null, badge: 'TOP', category: 'ROSES', images: ['https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600'] },
+            { id: 3, title: 'Інтер\'єрна Ваза з Сухоцвітами', price: 2600, oldPrice: null, badge: 'NEW', category: 'ІНТЕР\'ЄРНІ', images: ['https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=600'] }
         ];
 
-        let products = [];
+        window.products = [];
         let cart = [];
         let activeCategory = 'ALL';
-        let uploadedImagesBase64 = [];
-        let editingProductOriginalImages = [];
+        let tempImages = [];
+        let editingImages = [];
         const SECRET_PASS = "12months";
-
-        window.addEventListener('DOMContentLoaded', () => {
-            const savedProducts = localStorage.getItem('12m_products');
-            if (savedProducts) {
-                products = JSON.parse(savedProducts);
-            } else {
-                products = initialProducts;
-                localStorage.setItem('12m_products', JSON.stringify(products));
-            }
-
-            renderProducts();
-            checkUrlForSecret();
-        });
-
-        function checkUrlForSecret() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const hash = window.location.hash;
-            if (urlParams.get('admin') === 'secret' || hash === '#secret') {
-                promptAdminLogin();
-            }
-        }
-
-        function handleSearch(event) {
-            const query = event.target.value.trim().toLowerCase();
-            if (query === 'secret' || query === 'admin') {
-                event.target.value = '';
-                promptAdminLogin();
-            } else {
-                renderProducts(query);
-            }
-        }
-
-        function promptAdminLogin() {
-            const input = document.getElementById('authPasswordInput');
-            input.value = '';
-            document.getElementById('authModal').classList.add('active');
-            setTimeout(() => input.focus(), 100);
-        }
-
-        function handleAdminAuth(e) {
-            e.preventDefault();
-            const pass = document.getElementById('authPasswordInput').value;
-            
-            if (pass === SECRET_PASS) {
-                closeModal('authModal');
-                openAdminModal();
-            } else {
-                alert("Невірний пароль доступа!");
-                document.getElementById('authPasswordInput').value = '';
-            }
-        }
-
-        function openAdminModal() {
-            resetAdminForm();
-            renderAdminProductList();
-            document.getElementById('adminModal').classList.add('active');
-        }
 
         function renderProducts(searchQuery = '') {
             const grid = document.getElementById('productsGrid');
+            if (!grid) return;
             grid.innerHTML = '';
 
-            let filtered = products;
+            let filtered = window.products;
 
             if (activeCategory !== 'ALL') {
-                if (activeCategory === 'ВІД 1800 ГРН') {
-                    filtered = products.filter(p => p.price >= 1800 && p.price < 2500);
-                } else if (activeCategory === 'ВІД 2500 ГРН') {
-                    filtered = products.filter(p => p.price >= 2500 && p.price < 4500);
-                } else if (activeCategory === 'ВІД 4500 ГРН') {
-                    filtered = products.filter(p => p.price >= 4500);
-                } else {
-                    filtered = products.filter(p => p.category === activeCategory);
-                }
+                if (activeCategory === 'ВІД 1800 ГРН') filtered = window.products.filter(p => p.price >= 1800 && p.price < 2500);
+                else if (activeCategory === 'ВІД 2500 ГРН') filtered = window.products.filter(p => p.price >= 2500 && p.price < 4500);
+                else if (activeCategory === 'ВІД 4500 ГРН') filtered = window.products.filter(p => p.price >= 4500);
+                else filtered = window.products.filter(p => p.category === activeCategory);
             }
 
             if (searchQuery) {
@@ -1434,112 +399,40 @@
             }
 
             if (filtered.length === 0) {
-                grid.innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding: 40px; color: var(--text-muted);">Букетів у цій категорії поки немає</div>';
+                grid.innerHTML = '<div style="grid-column: 1/-1; text-align:center; padding: 40px; color: var(--text-muted);">Товари відсутні</div>';
                 return;
             }
 
-            filtered.forEach(product => {
+            filtered.forEach(p => {
                 const card = document.createElement('div');
                 card.className = 'product-card';
 
-                // BADGES GENERATION
-                let badgesHtml = '';
-                if (product.badge) {
-                    if (product.badge === 'NEW') badgesHtml += `<span class="badge badge-new"><i class="fa-solid fa-sparkles"></i> NEW</span>`;
-                    if (product.badge === 'TOP') badgesHtml += `<span class="badge badge-top"><i class="fa-solid fa-fire"></i> TOP</span>`;
-                    if (product.badge === 'SALE' && (!product.oldPrice || product.oldPrice <= product.price)) {
-                        badgesHtml += `<span class="badge badge-sale">SALE</span>`;
-                    }
-                }
+                let badgeHtml = '';
+                if (p.badge === 'NEW') badgeHtml = '<span class="badge badge-new">NEW</span>';
+                else if (p.badge === 'TOP') badgeHtml = '<span class="badge badge-top">TOP 🔥</span>';
+                else if (p.badge === 'SALE' || (p.oldPrice && p.oldPrice > p.price)) badgeHtml = '<span class="badge badge-sale">SALE</span>';
 
-                if (product.oldPrice && product.oldPrice > product.price) {
-                    const discount = Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100);
-                    badgesHtml += `<span class="badge badge-sale">-${discount}%</span>`;
-                }
-
-                // GALLERY GENERATION
-                let slidesHtml = '';
-                let dotsHtml = '';
-                product.images.forEach((img, idx) => {
-                    slidesHtml += `<div class="gallery-slide"><img src="${img}" alt="${product.title}"></div>`;
-                    if(product.images.length > 1) {
-                        dotsHtml += `<div class="dot ${idx === 0 ? 'active' : ''}" onclick="setSlide(${product.id}, ${idx})"></div>`;
-                    }
-                });
-
-                let arrowsHtml = '';
-                if(product.images.length > 1) {
-                    arrowsHtml = `
-                        <button class="gallery-arrow prev" onclick="moveSlide(${product.id}, -1)">&lt;</button>
-                        <button class="gallery-arrow next" onclick="moveSlide(${product.id}, 1)">&gt;</button>
-                    `;
-                }
-
-                // PRICE GENERATION
-                let priceHtml = '';
-                if (product.oldPrice && product.oldPrice > product.price) {
-                    priceHtml = `
-                        <span class="old-price">${product.oldPrice} грн</span>
-                        <span class="product-price sale">${product.price} грн</span>
-                    `;
-                } else {
-                    priceHtml = `<span class="product-price">${product.price} грн</span>`;
-                }
+                const imgUrl = (p.images && p.images.length > 0) ? p.images[0] : 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=600';
 
                 card.innerHTML = `
-                    <div class="product-badges">${badgesHtml}</div>
-                    <div class="product-gallery" id="gallery-${product.id}">
-                        <div class="gallery-slides" id="slides-${product.id}">
-                            ${slidesHtml}
-                        </div>
-                        ${arrowsHtml}
-                        <div class="gallery-dots" id="dots-${product.id}">
-                            ${dotsHtml}
-                        </div>
+                    <div class="product-badges">${badgeHtml}</div>
+                    <div class="product-gallery">
+                        <div class="gallery-slide"><img src="${imgUrl}" alt="${p.title}"></div>
                     </div>
                     <div class="product-info">
-                        <span class="product-category">${product.category}</span>
-                        <h3 class="product-title">${product.title}</h3>
+                        <span class="product-category">${p.category}</span>
+                        <h3 class="product-title">${p.title}</h3>
                         <div class="product-footer">
-                            <div class="price-box">${priceHtml}</div>
-                            <button class="add-to-cart-btn" onclick="addToCart(${product.id})">У кошик</button>
+                            <div>
+                                ${p.oldPrice ? `<span class="old-price">${p.oldPrice} грн</span>` : ''}
+                                <span class="product-price">${p.price} грн</span>
+                            </div>
+                            <button class="add-to-cart-btn" onclick="addToCart(${p.id})">У кошик</button>
                         </div>
                     </div>
                 `;
                 grid.appendChild(card);
             });
-        }
-
-        const carouselStates = {};
-
-        function moveSlide(productId, direction) {
-            const product = products.find(p => p.id === productId);
-            if (!product) return;
-            
-            if (!(productId in carouselStates)) carouselStates[productId] = 0;
-            
-            let currentIndex = carouselStates[productId] + direction;
-            if (currentIndex < 0) currentIndex = product.images.length - 1;
-            if (currentIndex >= product.images.length) currentIndex = 0;
-
-            setSlide(productId, currentIndex);
-        }
-
-        function setSlide(productId, index) {
-            carouselStates[productId] = index;
-            const slidesContainer = document.getElementById(`slides-${productId}`);
-            const dotsContainer = document.getElementById(`dots-${productId}`);
-            
-            if (slidesContainer) {
-                slidesContainer.style.transform = `translateX(-${index * 100}%)`;
-            }
-
-            if (dotsContainer) {
-                const dots = dotsContainer.querySelectorAll('.dot');
-                dots.forEach((dot, idx) => {
-                    dot.classList.toggle('active', idx === index);
-                });
-            }
         }
 
         function filterCategory(cat) {
@@ -1550,136 +443,76 @@
             renderProducts();
         }
 
-        function addToCart(productId) {
-            const product = products.find(p => p.id === productId);
-            if (product) {
-                cart.push(product);
-                updateCartBadge();
-                alert(`"${product.title}" додано у кошик!`);
-            }
+        function handleSearch(e) {
+            const val = e.target.value.toLowerCase().trim();
+            if (val === 'admin' || val === 'secret') promptAdminLogin();
+            else renderProducts(val);
         }
 
-        function updateCartBadge() {
-            document.getElementById('cartCount').innerText = cart.length;
+        function promptAdminLogin() {
+            document.getElementById('authPasswordInput').value = '';
+            document.getElementById('authModal').classList.add('active');
         }
 
-        function openCart() {
-            renderCartItems();
-            document.getElementById('cartModal').classList.add('active');
-        }
-
-        function renderCartItems() {
-            const container = document.getElementById('cartItemsContainer');
-            container.innerHTML = '';
-
-            if (cart.length === 0) {
-                container.innerHTML = '<p style="text-align:center; color: var(--text-muted); padding: 20px;">Ваш кошик порожній</p>';
-                document.getElementById('cartTotal').innerText = 'Разом: 0 грн';
-                return;
-            }
-
-            let total = 0;
-            cart.forEach((item, index) => {
-                total += item.price;
-                const div = document.createElement('div');
-                div.className = 'cart-item';
-                div.innerHTML = `
-                    <img src="${item.images[0]}" class="cart-item-img">
-                    <div class="cart-item-details">
-                        <div class="cart-item-title">${item.title}</div>
-                        <div class="cart-item-price">${item.price} грн</div>
-                    </div>
-                    <button class="cart-item-remove" onclick="removeFromCart(${index})">&times;</button>
-                `;
-                container.appendChild(div);
-            });
-
-            document.getElementById('cartTotal').innerText = `Разом: ${total} грн`;
-        }
-
-        function removeFromCart(index) {
-            cart.splice(index, 1);
-            updateCartBadge();
-            renderCartItems();
-        }
-
-        function toggleAddressInput() {
-            const deliveryType = document.getElementById('orderDelivery').value;
-            const addressGroup = document.getElementById('addressGroup');
-            if (deliveryType.includes('Самовивіз')) {
-                addressGroup.style.display = 'none';
+        function checkAuth() {
+            const pass = document.getElementById('authPasswordInput').value;
+            if (pass === SECRET_PASS) {
+                closeModal('authModal');
+                openAdmin();
             } else {
-                addressGroup.style.display = 'flex';
+                alert('Невірний пароль!');
             }
         }
 
-        function submitOrder(e) {
-            e.preventDefault();
-            if (cart.length === 0) {
-                alert("Додайте хоча б один товар у кошик!");
-                return;
-            }
+        function openAdmin() {
+            resetAdminForm();
+            renderAdminList();
+            document.getElementById('adminModal').classList.add('active');
+        }
 
-            const name = document.getElementById('orderName').value;
-            const phone = document.getElementById('orderPhone').value;
-            const delivery = document.getElementById('orderDelivery').value;
-            const address = document.getElementById('orderAddress').value;
-            const time = document.getElementById('orderTime').value;
-            const comment = document.getElementById('orderComment').value;
-            const msgType = document.querySelector('input[name="msgType"]:checked').value;
+        function compressImage(file, callback) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    let width = img.width;
+                    let height = img.height;
+                    const maxDim = 800;
 
-            let itemsListText = cart.map((item, i) => `${i + 1}. ${item.title} - ${item.price} грн`).join('\n');
-            let totalSum = cart.reduce((sum, item) => sum + item.price, 0);
+                    if (width > height && width > maxDim) {
+                        height = Math.round((height * maxDim) / width);
+                        width = maxDim;
+                    } else if (height > maxDim) {
+                        width = Math.round((width * maxDim) / height);
+                        height = maxDim;
+                    }
 
-            let message = `🌸 *НОВЕ ЗАМОВЛЕННЯ 12monthsflowers* 🌸\n\n`;
-            message += `👤 *Замовник:* ${name}\n`;
-            message += `📞 *Телефон:* ${phone}\n`;
-            message += `🚚 *Спосіб отримання:* ${delivery}\n`;
-            if (delivery.includes('Доставка')) {
-                message += `📍 *Адреса:* ${address}\n`;
-            }
-            if (time) message += `⏰ *Час:* ${time}\n`;
-            if (comment) message += `📝 *Записка/Коментар:* ${comment}\n`;
-            message += `\n💐 *Товари в замовленні:*\n${itemsListText}\n\n`;
-            message += `💰 *Загальна сума:* ${totalSum} грн`;
-
-            const encodedMessage = encodeURIComponent(message);
-
-            if (msgType === 'tg') {
-                window.open(`https://t.me/Prolisok12?text=${encodedMessage}`, '_blank');
-            } else if (msgType === 'wa') {
-                window.open(`https://wa.me/380663037806?text=${encodedMessage}`, '_blank');
-            } else if (msgType === 'viber') {
-                window.open(`https://r.mssg.me/m/63ff69ff0dfc940011df431e`, '_blank');
-            }
-
-            cart = [];
-            updateCartBadge();
-            closeModal('cartModal');
-            alert("Дякуємо! Переходимо у месенджер для підтвердження замовлення.");
+                    canvas.width = width;
+                    canvas.height = height;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0, width, height);
+                    callback(canvas.toDataURL('image/jpeg', 0.7));
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
         }
 
         function handleFileSelect(e) {
             const files = Array.from(e.target.files);
-            if (files.length > 5) {
-                alert("Можна завантажити не більше 5 фотографій!");
-                return;
-            }
-
-            uploadedImagesBase64 = [];
-            const previewGrid = document.getElementById('adminPreviewGrid');
-            previewGrid.innerHTML = '';
+            tempImages = [];
+            const preview = document.getElementById('adminPreviewGrid');
+            preview.innerHTML = '';
 
             files.forEach(file => {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    uploadedImagesBase64.push(event.target.result);
+                compressImage(file, (base64Img) => {
+                    tempImages.push(base64Img);
                     const img = document.createElement('img');
-                    img.src = event.target.result;
-                    img.className = 'admin-preview-img';
-                    previewGrid.appendChild(img);
-                };
-                reader.readAsDataURL(file);
+                    img.src = base64Img;
+                    img.style.cssText = 'width:50px; height:50px; object-fit:cover; border-radius:6px;';
+                    preview.appendChild(img);
+                });
             });
         }
 
@@ -1688,139 +521,137 @@
 
             const editId = document.getElementById('adminEditId').value;
             const title = document.getElementById('adminTitle').value;
-            const price = parseFloat(document.getElementById('adminPrice').value);
+            const price = Number(document.getElementById('adminPrice').value);
             const oldPriceVal = document.getElementById('adminOldPrice').value;
-            const oldPrice = oldPriceVal ? parseFloat(oldPriceVal) : null;
+            const oldPrice = oldPriceVal ? Number(oldPriceVal) : null;
             const category = document.getElementById('adminCategory').value;
             const badge = document.getElementById('adminBadge').value;
 
             let finalImages = [];
-            if (uploadedImagesBase64.length > 0) {
-                finalImages = [...uploadedImagesBase64];
-            } else if (editId) {
-                finalImages = [...editingProductOriginalImages];
+            if (tempImages.length > 0) {
+                finalImages = tempImages;
+            } else if (editId && editingImages.length > 0) {
+                finalImages = editingImages;
             } else {
-                alert("Будь ласка, завантажте хоча б одну фотографію!");
-                return;
+                finalImages = ['https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=600'];
             }
+
+            let updatedProducts = [...window.products];
 
             if (editId) {
-                // UPDATE EXISTING PRODUCT
-                const index = products.findIndex(p => p.id == editId);
-                if (index !== -1) {
-                    products[index] = {
-                        ...products[index],
-                        title,
-                        price,
-                        oldPrice,
-                        category,
-                        badge,
-                        images: finalImages
-                    };
-                    alert("Товар успішно оновлено!");
+                const idx = updatedProducts.findIndex(p => p.id == editId);
+                if (idx !== -1) {
+                    updatedProducts[idx] = { id: Number(editId), title, price, oldPrice, category, badge, images: finalImages };
                 }
             } else {
-                // ADD NEW PRODUCT
-                const newProduct = {
-                    id: Date.now(),
-                    title,
-                    price,
-                    oldPrice,
-                    category,
-                    badge,
-                    images: finalImages
-                };
-                products.unshift(newProduct);
-                alert("Новий товар додано!");
+                const newProd = { id: Date.now(), title, price, oldPrice, category, badge, images: finalImages };
+                updatedProducts.unshift(newProd);
             }
 
-            localStorage.setItem('12m_products', JSON.stringify(products));
-            resetAdminForm();
-            renderProducts();
-            renderAdminProductList();
+            if (window.db && window.dbSet && window.dbRef) {
+                window.dbSet(window.dbRef(window.db, 'products'), updatedProducts)
+                    .then(() => {
+                        alert("Товар збережено в хмару!");
+                        resetAdminForm();
+                    })
+                    .catch((err) => {
+                        alert("Помилка збереження в Firebase: " + err.message);
+                    });
+            }
         }
 
         function editProduct(id) {
-            const product = products.find(p => p.id === id);
-            if (!product) return;
+            const p = window.products.find(x => x.id === id);
+            if (!p) return;
 
-            document.getElementById('adminEditId').value = product.id;
-            document.getElementById('adminTitle').value = product.title;
-            document.getElementById('adminPrice').value = product.price;
-            document.getElementById('adminOldPrice').value = product.oldPrice || '';
-            document.getElementById('adminCategory').value = product.category;
-            document.getElementById('adminBadge').value = product.badge || '';
+            document.getElementById('adminEditId').value = p.id;
+            document.getElementById('adminTitle').value = p.title;
+            document.getElementById('adminPrice').value = p.price;
+            document.getElementById('adminOldPrice').value = p.oldPrice || '';
+            document.getElementById('adminCategory').value = p.category;
+            document.getElementById('adminBadge').value = p.badge || '';
 
-            editingProductOriginalImages = product.images;
-            uploadedImagesBase64 = [];
+            editingImages = p.images || [];
+            tempImages = [];
 
-            const previewGrid = document.getElementById('adminPreviewGrid');
-            previewGrid.innerHTML = '';
-            product.images.forEach(imgSrc => {
-                const img = document.createElement('img');
-                img.src = imgSrc;
-                img.className = 'admin-preview-img';
-                previewGrid.appendChild(img);
-            });
+            document.getElementById('adminTitleHeader').innerText = "Редагувати товар ✏️";
+            document.getElementById('adminSubmitBtn').innerText = "Оновити товар у хмарі";
+        }
 
-            document.getElementById('adminFormTitle').innerText = "Редагувати товар ✏️";
-            document.getElementById('adminSaveBtn').innerText = "Зберегти зміни";
-            document.getElementById('adminCancelEditBtn').style.display = "block";
+        function deleteProduct(id) {
+            if (confirm("Видалити товар з хмари?")) {
+                const updated = window.products.filter(p => p.id !== id);
+                if (window.db && window.dbSet && window.dbRef) {
+                    window.dbSet(window.dbRef(window.db, 'products'), updated);
+                }
+            }
+        }
 
-            document.querySelector('.admin-modal').scrollTop = 0;
+        function restoreDefaults() {
+            if (confirm("Завантажити початковий асортимент у хмару?")) {
+                if (window.db && window.dbSet && window.dbRef) {
+                    window.dbSet(window.dbRef(window.db, 'products'), initialProducts);
+                }
+            }
         }
 
         function resetAdminForm() {
             document.getElementById('adminEditId').value = '';
-            document.getElementById('adminTitle').value = '';
-            document.getElementById('adminPrice').value = '';
-            document.getElementById('adminOldPrice').value = '';
-            document.getElementById('adminCategory').value = 'ВЕСІЛЬНІ';
-            document.getElementById('adminBadge').value = '';
-            document.getElementById('adminFileInput').value = '';
+            document.getElementById('adminForm').reset();
             document.getElementById('adminPreviewGrid').innerHTML = '';
-
-            uploadedImagesBase64 = [];
-            editingProductOriginalImages = [];
-
-            document.getElementById('adminFormTitle').innerText = "Адмін-панель 🔐";
-            document.getElementById('adminSaveBtn').innerText = "Додати новий товар";
-            document.getElementById('adminCancelEditBtn').style.display = "none";
+            tempImages = [];
+            editingImages = [];
+            document.getElementById('adminTitleHeader').innerText = "Адмін-панель 🔐";
+            document.getElementById('adminSubmitBtn').innerText = "Зберегти товар у хмару";
         }
 
-        function renderAdminProductList() {
+        function renderAdminList() {
             const list = document.getElementById('adminProductList');
+            if (!list) return;
             list.innerHTML = '';
 
-            products.forEach(p => {
+            window.products.forEach(p => {
                 const item = document.createElement('div');
                 item.className = 'admin-item';
                 item.innerHTML = `
-                    <div>
-                        <strong>${p.title}</strong> (${p.price} грн) 
-                        ${p.oldPrice ? `<span style="text-decoration:line-through; font-size:0.8rem; color:#888;">${p.oldPrice}грн</span>` : ''} 
-                        [${p.badge || 'Без мітки'}]
-                    </div>
+                    <span><strong>${p.title}</strong> — ${p.price} грн</span>
                     <div class="admin-item-actions">
-                        <button class="btn-edit" onclick="editProduct(${p.id})">✏️ Редагувати</button>
-                        <button class="btn-delete" onclick="deleteProduct(${p.id})">🗑️</button>
+                        <button onclick="editProduct(${p.id})" style="background:#3182ce; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer;">✏️</button>
+                        <button onclick="deleteProduct(${p.id})" style="background:#e53e3e; color:#fff; border:none; padding:4px 8px; border-radius:4px; cursor:pointer;">🗑️</button>
                     </div>
                 `;
                 list.appendChild(item);
             });
         }
 
-        function deleteProduct(id) {
-            if (confirm("Ви дійсно бажаєте видалити цей товар?")) {
-                products = products.filter(p => p.id !== id);
-                localStorage.setItem('12m_products', JSON.stringify(products));
-                renderProducts();
-                renderAdminProductList();
+        function addToCart(id) {
+            const p = window.products.find(x => x.id === id);
+            if (p) {
+                cart.push(p);
+                document.getElementById('cartCount').innerText = cart.length;
+                alert(`"${p.title}" додано у кошик!`);
             }
         }
 
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.remove('active');
+        function openCart() {
+            const container = document.getElementById('cartItemsContainer');
+            container.innerHTML = '';
+            let total = 0;
+
+            cart.forEach(item => {
+                total += item.price;
+                const div = document.createElement('div');
+                div.style.cssText = "display:flex; justify-content:space-between; margin-bottom:8px;";
+                div.innerHTML = `<span>${item.title}</span> <strong>${item.price} грн</strong>`;
+                container.appendChild(div);
+            });
+
+            document.getElementById('cartTotal').innerText = `Разом: ${total} грн`;
+            document.getElementById('cartModal').classList.add('active');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
         }
     </script>
 </body>
